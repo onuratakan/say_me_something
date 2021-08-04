@@ -8,41 +8,36 @@ setup(name='say_me_something',
 version='0.1.0',
 description="""Lots of cyber security tool""",
 long_description="""
-# HACON
-Lots of cyber security tool
+# Say Me Something
+A text to speak library with embedded cache system.
 # Install
 ```
-pip3 install HACON
+pip3 install say-me-something
 ```
 # Using
 ## In another script
 ```python
-from hacon import HACON
+from say_me_something import say
 
-HACON.arguments("-h")
+# say(text = None, language = "en", no_cache = False, reset = False, no_speak = False)
+
+say("Hello")
 ```
 ## In command line
-```python
-HACON -h
+```console
+  -h, --help            show this help message and exit
+  -t TEXT [TEXT ...], --text TEXT [TEXT ...]
+                        Text
+  -l LANGUAGE, --language LANGUAGE
+                        Language
+  -nc, --nocache        No cache
+  -r, --reset           Reset (removing the caches)
+  -ns, --nospeak        No speak
 ```
 
-# With docker
-## Install 
+```console
+say -t Hello
 ```
-docker pull ghcr.io/onuratakan/hacon:latest
-```
-## Using
-```
-docker run -t -i  --network=host ghcr.io/onuratakan/hacon /bin/sh
-```
-and type
-```python
-HACON -h
-```
-
-# Reminder
-Important Information and Reminder Information and programs in all repositories are created for testing purposes. Any legal responsibility belongs to the person or organization that uses it.
-
 """,
 long_description_content_type='text/markdown',
 url='https://github.com/onuratakan/say_me_something',
