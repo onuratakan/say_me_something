@@ -3,6 +3,7 @@ from playsound import playsound
 import os
 import sys
 import argparse
+from hashlib import sha256
 
 
 def say(text = None, language = "en", no_cache = False, reset = False, no_speak = False):
@@ -43,8 +44,8 @@ def say(text = None, language = "en", no_cache = False, reset = False, no_speak 
         if args.text is None and args.reset:
             exit()
 
-    file_name = str(text[:20]).replace(" ", "_")
-    files = os.path.join(the_dir, f"{file_name}-{language}.mp3")
+    file_name = sha256(str(str(text[:20]).replace(" ", "_") + language).encode('utf-8')).hexdigest()
+    files = os.path.join(the_dir, f"{file_name}.mp3")
                 
     if not os.path.exists(files) or no_cache:
         gTTS(text, lang = language).save(files)

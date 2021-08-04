@@ -5,8 +5,8 @@ from setuptools import setup
 
 
 setup(name='say_me_something',
-version='0.1.0',
-description="""Lots of cyber security tool""",
+version='0.1.1',
+description="""A text to speak library with embedded cache system.""",
 long_description="""
 # Say Me Something
 A text to speak library with embedded cache system.
