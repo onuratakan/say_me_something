@@ -40,7 +40,7 @@ def say(text = None, language = "en", no_cache = False, reset = False):
             exit()
 
     file_name = str(text[:20]).replace(" ", "_")
-    files = os.path.join(the_dir, f"{file_name}.mp3")
+    files = os.path.join(the_dir, f"{file_name}-{language}.mp3")
                 
     if not os.path.exists(files) or no_cache:
         gTTS(text, lang = language).save(files)

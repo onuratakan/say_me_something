@@ -4,7 +4,7 @@ from setuptools import setup
 
 
 
-setup(name='say_something',
+setup(name='say_me_something',
 version='0.1.0',
 description="""Lots of cyber security tool""",
 long_description="""
@@ -45,14 +45,14 @@ Important Information and Reminder Information and programs in all repositories 
 
 """,
 long_description_content_type='text/markdown',
-url='https://github.com/onuratakan/say_something',
+url='https://github.com/onuratakan/say_me_something',
 author='Onur Atakan ULUSOY',
 author_email='atadogan06@gmail.com',
 license='MIT',
-packages=["say_something"],
+packages=["say_me_something"],
 package_dir={'':'src'},
 package_data={
-    "say_something" : ["cache/*.mp3"],
+    "say_me_something" : ["cache/*.mp3"],
 },
 install_requires=[
     "click==8.0.1",
@@ -61,7 +61,7 @@ install_requires=[
     "pyttsx3==2.90",
 ],
 entry_points = {
-    'console_scripts': ['say=say_something.say_something:say'],
+    'console_scripts': ['say=say_me_something.say_me_something:say'],
 },
 python_requires='>=3',
 zip_safe=False)
