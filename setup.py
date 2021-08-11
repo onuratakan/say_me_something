@@ -5,7 +5,7 @@ from setuptools import setup
 
 
 setup(name='say_me_something',
-version='0.1.1',
+version='0.1.2',
 description="""A text to speak library with embedded cache system.""",
 long_description="""
 # Say Me Something
@@ -56,7 +56,7 @@ install_requires=[
     "pyttsx3==2.90",
 ],
 entry_points = {
-    'console_scripts': ['say=say_me_something.say_me_something:say'],
+    'console_scripts': ['say=say_me_something.say_me_something:arguments'],
 },
 python_requires='>=3',
 zip_safe=False)
